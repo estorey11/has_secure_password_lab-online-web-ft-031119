@@ -8,6 +8,9 @@ class UsersController < ApplicationController
     session[:user_id] = @user.id
     redirect_to controller: 'welcome', action: 'home'
   end
+  
+  def home
+  end
 
   private
 

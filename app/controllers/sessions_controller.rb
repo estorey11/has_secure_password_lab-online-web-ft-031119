@@ -4,6 +4,6 @@ class SessionsController < ApplicationController
     return head(:forbidden) unless @user.try(:authenticate, params[:user][:password])
     session[:user_id] = @user.id
     
-    redirect_to controller: 'welcome', action: 'home'
+    redirect_to controller: 'users', action: 'home'
   end
 end
